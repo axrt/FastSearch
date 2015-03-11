@@ -1,6 +1,8 @@
 package map;
 
 import org.junit.Test;
+import seq.SequenceHelper;
+
 import static java.lang.System.out;
 import java.util.HashMap;
 
@@ -19,8 +21,8 @@ public class KMapTest {
          //Initial node
         final HashMap<Character,KMap> root=new HashMap<Character, KMap>(4,4);
         //Fill in with atgc
-        for(Character character:KMap.ALF){
-            root.put(character,new KMap(character,kSize-2));
+        for(Character character: SequenceHelper.NUCL){
+            root.put(character,new KMap(character,kSize-2,SequenceHelper.NUCL));
         }
     }
 }
